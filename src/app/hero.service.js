@@ -17,9 +17,6 @@ var HeroService = (function () {
         return this.getHeroes()
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
-    HeroService.prototype.goBack = function () {
-        this.location.back();
-    };
     return HeroService;
 }());
 HeroService = __decorate([

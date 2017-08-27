@@ -9,12 +9,8 @@ export class HeroService {
 		return Promise.resolve(HEROES);
 	}
 
-	getHero(id: number): Hero {
-		return this.getHeroes()
-	     .then(heroes => heroes.find(hero => hero.id === id));
-	}
-
-	goBack(): void {
-  		this.location.back();
+	getHero(id: number): Promise<Hero> {
+	  return this.getHeroes()
+	             .then(heroes => heroes.find(hero => hero.id === id));
 	}
 }
